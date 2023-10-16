@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "766496558280",
+    "project_id": "cafeterita-b15f2",
+    "storage_bucket": "cafeterita-b15f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766496558280:android:44d4466bcb31ff1c7ce9fd",
+        "android_client_info": {
+          "package_name": "com.example.cafeterita"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766496558280-reghep5h44gld2jkqcrbvcg8p41a7lcu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIymbnCqikiDcXkVffNgKfcFp_V6ZYoB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766496558280-reghep5h44gld2jkqcrbvcg8p41a7lcu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
