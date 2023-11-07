@@ -26,9 +26,62 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/navigationBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnhome"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botonhome"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/home2" />
+
+        <ImageButton
+            android:id="@+id/btncomida"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botoncomida"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/comida3" />
+
+        <ImageButton
+            android:id="@+id/btnfila"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botonfila"
+            android:scaleType="centerInside"
+            android:src="@mipmap/fila3" />
+
+        <ImageButton
+            android:id="@+id/btnopciones"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botonopciones"
+            android:scaleType="centerInside"
+            android:src="@mipmap/hamburguesa" />
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

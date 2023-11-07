@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity {
                             Toast.makeText(Login.this, "El usuario ha iniciado sesión con éxito", Toast.LENGTH_SHORT).show();
                             // El usuario ha iniciado sesión con éxito.
                             // Puedes redirigirlo a la siguiente actividad o realizar otras acciones.
-                            Intent intent = new Intent(Login.this, Snacks.class);
+                            Intent intent = new Intent(Login.this, Bebidas.class);
                             startActivity(intent);
                         } else {
                             Toast.makeText(Login.this, "El inicio de sesión ha fallado. " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
