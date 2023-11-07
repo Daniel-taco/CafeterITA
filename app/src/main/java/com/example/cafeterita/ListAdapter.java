@@ -51,6 +51,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
         void bindData(final ListElement item) {
             name.setText(item.getName());
             price.setText(item.getPrice());
+            iconImage.setImageResource(item.getImageResId());
         }
     }
 }
