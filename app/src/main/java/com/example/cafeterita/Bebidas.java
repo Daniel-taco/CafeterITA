@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
@@ -57,6 +56,14 @@ public class Bebidas extends AppCompatActivity {
                 Intent intent = new Intent(Bebidas.this, FilaListas.class);
 
                 // Iniciar la actividad "Home"
+                startActivity(intent);
+            }
+        });
+        botonIrAOpciones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Crear un Intent para cambiar a la actividad "Ayuda"
+                Intent intent = new Intent(Bebidas.this, Ayuda.class);
                 startActivity(intent);
             }
         });

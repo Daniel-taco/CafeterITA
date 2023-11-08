@@ -1,6 +1,7 @@
 package com.example.cafeterita;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,15 +13,13 @@ import android.widget.ImageButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Snacks extends AppCompatActivity {
-
+public class Comida extends AppCompatActivity {
     List<ListElement> elements;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_snacks);
-
+        setContentView(R.layout.activity_comida);
         init();
 
         ImageButton botonIrAHome = findViewById(R.id.btnhome);
@@ -33,9 +32,7 @@ public class Snacks extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Crear un Intent para cambiar a la actividad "Home"
-                Intent intent = new Intent(Snacks.this, Home.class);
-
-                // Iniciar la actividad "Home"
+                Intent intent = new Intent(Comida.this, Home.class);
                 startActivity(intent);
             }
         });
@@ -43,9 +40,7 @@ public class Snacks extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Crear un Intent para cambiar a la actividad "Menu"
-                Intent intent = new Intent(Snacks.this, Menu.class);
-
-                // Iniciar la actividad "Home"
+                Intent intent = new Intent(Comida.this, Menu.class);
                 startActivity(intent);
             }
         });
@@ -53,17 +48,15 @@ public class Snacks extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Crear un Intent para cambiar a la actividad "Fila"
-                Intent intent = new Intent(Snacks.this, FilaListas.class);
-
-                // Iniciar la actividad "Home"
+                Intent intent = new Intent(Comida.this, FilaListas.class);
                 startActivity(intent);
             }
         });
         botonIrAOpciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Crear un Intent para cambiar a la actividad "Fila"
-                Intent intent = new Intent(Snacks.this, Ayuda.class);
+                // Crear un Intent para cambiar a la actividad "Ayuda"
+                Intent intent = new Intent(Comida.this, Ayuda.class);
                 startActivity(intent);
             }
         });
@@ -71,12 +64,12 @@ public class Snacks extends AppCompatActivity {
 
     public void init() {
         elements = new ArrayList<>();
-        elements.add(new ListElement("Galletas Chokis", "$20", R.mipmap.galletachokis));
-        elements.add(new ListElement("Galletas Principe", "$15", R.mipmap.galletaprincipe));
-        elements.add(new ListElement("Mazapan", "$10", R.mipmap.mazapan));
+        elements.add(new ListElement("Pizza", "$25", R.mipmap.pizza));
+        elements.add(new ListElement("Baguette Argentino", "$35", R.mipmap.baguette));
+        elements.add(new ListElement("Taco", "$10", R.mipmap.taco));
 
         ListAdapter listAdapter = new ListAdapter(elements, this);
-        RecyclerView recyclerView = findViewById(R.id.listRecyclerView);
+        RecyclerView recyclerView = findViewById(R.id.comidaRecyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(listAdapter);
