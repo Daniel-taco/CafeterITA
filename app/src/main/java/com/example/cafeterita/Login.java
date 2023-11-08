@@ -52,22 +52,26 @@ public class Login extends AppCompatActivity {
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
-        auth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(Login.this, "El usuario ha iniciado sesión con éxito", Toast.LENGTH_SHORT).show();
-                            // El usuario ha iniciado sesión con éxito.
-                            // Puedes redirigirlo a la siguiente actividad o realizar otras acciones.
-                            Intent intent = new Intent(Login.this, Ayuda.class);
-                            startActivity(intent);
-                        } else {
-                            Toast.makeText(Login.this, "El inicio de sesión ha fallado. " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            // El inicio de sesión ha fallado. Puedes obtener más información con task.getException().
+        if (email.length() == 0 || password.length() == 0){
+            Toast.makeText(this, "Debes llenar los campos", Toast.LENGTH_LONG).show();
+        } else {
+            auth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(Login.this, "El usuario ha iniciado sesión con éxito", Toast.LENGTH_SHORT).show();
+                                // El usuario ha iniciado sesión con éxito.
+                                // Puedes redirigirlo a la siguiente actividad o realizar otras acciones.
+                                Intent intent = new Intent(Login.this, Home.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(Login.this, "El inicio de sesión ha fallado. " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                // El inicio de sesión ha fallado. Puedes obtener más información con task.getException().
+                            }
                         }
-                    }
-                });
+                    });
+        }
     }
     private void registerUser() {
         String email = editTextEmail.getText().toString();
@@ -75,19 +79,23 @@ public class Login extends AppCompatActivity {
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
-        auth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(Login.this, "El usuario se ha registrado con éxito", Toast.LENGTH_SHORT).show();
-                            // El usuario se ha registrado con éxito.
-                            // Puedes redirigirlo a la siguiente actividad o realizar otras acciones.
-                        } else {
-                            Toast.makeText(Login.this, "El registro ha fallado. " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            // El registro ha fallado. Puedes obtener más información con task.getException().
+
+        if (email.length() == 0 || password.length() == 0){
+            Toast.makeText(this, "Debes llenar los campos", Toast.LENGTH_LONG).show();
+        } else {
+            auth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(Login.this, "El usuario se ha registrado con éxito", Toast.LENGTH_SHORT).show();
+                                // El usuario se ha registrado con éxito.
+                            } else {
+                                Toast.makeText(Login.this, "El registro ha fallado. " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                // El registro ha fallado.
+                            }
                         }
-                    }
-                });
+                    });
+        }
     }
 }

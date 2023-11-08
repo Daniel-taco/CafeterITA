@@ -9,4 +9,7 @@
     <string name="textViewBienvenida">Bienvenido a nuestro Menú</string>
     <string name="botonMenu">Ver productos</string>
     <string name="textviewAyuda">Aquí podrás encontrar nuestro perfil de Facebook para no perderte de novedades así como mandar dudas con respecto al uso de la aplicación</string>
+    <string name="textviewNomPro">Nombre Producto</string>
+    <string name="textviewPrePro">Precio Producto</string>
+
 </resources>
