@@ -78,5 +78,12 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+
+    //Metodo boton notas
+    public  void Notas(View view){
+        Intent notas = new Intent(this, Notas.class);
+        startActivity(notas);
     }
 }

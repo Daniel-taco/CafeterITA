@@ -81,4 +81,5 @@ public class Snacks extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(listAdapter);
     }
+    
 }

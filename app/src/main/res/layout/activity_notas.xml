@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="Atras"
+    tools:context=".Notas">
+
+    <EditText
+        android:id="@+id/txt_bitacora"
+        android:layout_width="293dp"
+        android:layout_height="458dp"
+        android:layout_marginTop="60dp"
+        android:background="#B6CACA"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="@string/textview_bitacora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="167dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:onClick="Guardar"
+        android:shadowColor="#009688"
+        android:text="@string/botonnotas"
+        android:textColorLink="#673AB7"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#009688"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bitacora"
+        app:rippleColor="#009688"
+        app:strokeColor="#404040" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="105dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="88dp"
+        android:onClick="Atras"
+        android:text="@string/botonatras"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#009688"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bitacora"
+        app:strokeColor="#009688" />
+</androidx.constraintlayout.widget.ConstraintLayout>

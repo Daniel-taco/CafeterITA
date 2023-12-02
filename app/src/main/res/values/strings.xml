@@ -11,5 +11,9 @@
     <string name="textviewAyuda">Aquí podrás encontrar nuestro perfil de Facebook para no perderte de novedades así como mandar dudas con respecto al uso de la aplicación</string>
     <string name="textviewNomPro">Nombre Producto</string>
     <string name="textviewPrePro">Precio Producto</string>
+    <string name="botonnotas">Guardar</string>
+    <string name="textview_bitacora">Escribir Productos a comprar</string>
+    <string name="botonmas">+</string>
+    <string name="botonatras">Atras</string>
 
 </resources>
