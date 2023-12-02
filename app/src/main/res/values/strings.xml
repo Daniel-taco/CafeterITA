@@ -15,5 +15,6 @@
     <string name="textview_bitacora">Escribir Productos a comprar</string>
     <string name="botonmas">+</string>
     <string name="botonatras">Atras</string>
+    <string name="textviewnotas">¡ Fabrica tu lista antes de comprar !</string>
 
 </resources>

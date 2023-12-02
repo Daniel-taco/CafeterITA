@@ -9,29 +9,36 @@
 
     <EditText
         android:id="@+id/txt_bitacora"
-        android:layout_width="293dp"
-        android:layout_height="458dp"
-        android:layout_marginTop="60dp"
-        android:background="#B6CACA"
+        android:layout_width="292dp"
+        android:layout_height="421dp"
+        android:layout_marginTop="32dp"
+        android:background="#F6F5F5"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="@string/textview_bitacora"
         android:inputType="textMultiLine"
+        android:shadowColor="#000000"
         android:text="@string/textview_bitacora"
+
+
+        android:textAllCaps="false"
+        android:textColor="#070707"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="167dp"
         android:layout_height="56dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="32dp"
         android:onClick="Guardar"
         android:shadowColor="#009688"
         android:text="@string/botonnotas"
-        android:textColorLink="#673AB7"
+        android:textColorLink="#009688"
         android:textSize="20sp"
         android:textStyle="bold"
         app:backgroundTint="#009688"
@@ -44,8 +51,8 @@
         android:id="@+id/button4"
         android:layout_width="105dp"
         android:layout_height="59dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="88dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="60dp"
         android:onClick="Atras"
         android:text="@string/botonatras"
         android:textSize="20sp"
@@ -54,4 +61,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_bitacora"
         app:strokeColor="#009688" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="255dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="28dp"
+        android:text="¡ Fabrica tu lista antes de comprar !"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/textviewnotas" />
 </androidx.constraintlayout.widget.ConstraintLayout>
