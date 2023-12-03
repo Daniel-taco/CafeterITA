@@ -12,9 +12,18 @@
     <string name="textviewNomPro">Nombre Producto</string>
     <string name="textviewPrePro">Precio Producto</string>
     <string name="botonnotas">Guardar</string>
-    <string name="textview_bitacora">Escribir Productos a comprar</string>
+    <string name="Edittext_bitacora">Escribir Productos a comprar</string>
     <string name="botonmas">+</string>
     <string name="botonatras">Atras</string>
     <string name="textviewnotas">¡ Fabrica tu lista antes de comprar !</string>
+    <string name="txt_agenda">¡ Agenda que dias venden tu comida Favorita !</string>
+    <string name="txt_dia">Dia de la semana</string>
+    <string name="txt_datos">Comida de el dia</string>
+    <string name="botonagenda1">Guardar</string>
+    <string name="botonagenda2">Buscar</string>
+
+
+
+
 
 </resources>

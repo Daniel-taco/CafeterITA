@@ -21,6 +21,7 @@ public class Home extends AppCompatActivity {
         ImageButton botonIrAComida = findViewById(R.id.btncomida);
         ImageButton botonIrAFila = findViewById(R.id.btnfila);
         ImageButton botonIrAOpciones = findViewById(R.id.btnopciones);
+        ImageButton botonIrAAgenda = findViewById(R.id.btnagenda);
 
         RadioGroup radioGroup = findViewById(R.id.radioGroup);
 
@@ -78,6 +79,14 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        botonIrAAgenda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Crear un Intent para cambiar a la actividad "Ayuda"
+                Intent intent = new Intent(Home.this, SharedAgenda.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -86,4 +95,6 @@ public class Home extends AppCompatActivity {
         Intent notas = new Intent(this, Notas.class);
         startActivity(notas);
     }
+
+
 }

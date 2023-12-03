@@ -92,6 +92,7 @@
             android:scaleType="centerInside"
             android:src="@mipmap/hamburguesa" />
 
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

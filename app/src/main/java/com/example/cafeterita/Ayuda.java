@@ -20,6 +20,7 @@ public class Ayuda extends AppCompatActivity {
         ImageButton botonIrAFila = findViewById(R.id.btnfila);
         ImageButton botonIrAOpciones = findViewById(R.id.btnopciones);
 
+
         WebView myWebView = findViewById(R.id.webview);
 
         myWebView.setWebViewClient(new WebViewClient());

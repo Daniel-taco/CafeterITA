@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00FFFFFF"
     tools:context=".Home">
 
     <TextView
@@ -44,6 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
+
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="252dp"
@@ -53,7 +55,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.318">
 
         <RadioButton
             android:id="@+id/radioButton1"
@@ -68,7 +71,6 @@
             android:text="Aún no quiero usala" />
 
     </RadioGroup>
-
 
     <TextView
         android:id="@+id/textView8"
@@ -100,8 +102,8 @@
         android:id="@+id/navigationBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:background="#99FFFF"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -148,6 +150,15 @@
             android:scaleType="centerInside"
             android:src="@mipmap/hamburguesa" />
 
+        <ImageButton
+            android:id="@+id/btnagenda"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botondeagenda"
+            android:scaleType="centerInside"
+            app:srcCompat="@mipmap/agen" />
     </LinearLayout>
 
     <Button
@@ -159,9 +170,13 @@
         android:layout_marginBottom="44dp"
         android:onClick="Notas"
         android:text="@string/botonmas"
-        app:backgroundTint="#70F6EA"
+        android:textColor="#050505"
+        app:backgroundTint="#99FFFF"
         app:layout_constraintBottom_toTopOf="@+id/navigationBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toEndOf="@+id/radioGroup" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
