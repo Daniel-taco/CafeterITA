@@ -27,6 +27,7 @@ public class Bebidas extends AppCompatActivity {
         ImageButton botonIrAComida = findViewById(R.id.btncomida);
         ImageButton botonIrAFila = findViewById(R.id.btnfila);
         ImageButton botonIrAOpciones = findViewById(R.id.btnopciones);
+        ImageButton botonIrAAgenda = findViewById(R.id.btnagenda);
 
         // Agrega un listener al botón para manejar el clic
         botonIrAHome.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +65,14 @@ public class Bebidas extends AppCompatActivity {
             public void onClick(View v) {
                 // Crear un Intent para cambiar a la actividad "Ayuda"
                 Intent intent = new Intent(Bebidas.this, Ayuda.class);
+                startActivity(intent);
+            }
+        });
+        botonIrAAgenda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Crear un Intent para cambiar a la actividad "Ayuda"
+                Intent intent = new Intent(Bebidas.this, SharedAgenda.class);
                 startActivity(intent);
             }
         });

@@ -25,56 +25,65 @@
         app:layout_constraintBottom_toTopOf="@id/navigationBar"/>
 
     <LinearLayout
-    android:id="@+id/navigationBar"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="#99FFFF"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent">
-
-    <ImageButton
-        android:id="@+id/btnhome"
+        android:id="@+id/navigationBar"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_weight="1"
-        android:background="#00FFFFFF"
-        android:contentDescription="botonhome"
-        android:padding="4dp"
-        android:scaleType="centerInside"
-        android:src="@mipmap/home2" />
+        android:layout_height="wrap_content"
+        android:background="#99FFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ImageButton
-        android:id="@+id/btncomida"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_weight="1"
-        android:background="#00FFFFFF"
-        android:contentDescription="botoncomida"
-        android:padding="4dp"
-        android:scaleType="centerInside"
-        android:src="@mipmap/comida3" />
+        <ImageButton
+            android:id="@+id/btnhome"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botonhome"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/home2" />
 
-    <ImageButton
-        android:id="@+id/btnfila"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_weight="1"
-        android:background="#00FFFFFF"
-        android:contentDescription="botonfila"
-        android:scaleType="centerInside"
-        android:src="@mipmap/fila3" />
+        <ImageButton
+            android:id="@+id/btncomida"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botoncomida"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/comida3" />
 
-    <ImageButton
-        android:id="@+id/btnopciones"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_weight="1"
-        android:background="#00FFFFFF"
-        android:contentDescription="botonopciones"
-        android:scaleType="centerInside"
-        android:src="@mipmap/hamburguesa" />
+        <ImageButton
+            android:id="@+id/btnfila"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botonfila"
+            android:scaleType="centerInside"
+            android:src="@mipmap/fila3" />
 
-</LinearLayout>
+        <ImageButton
+            android:id="@+id/btnopciones"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botonopciones"
+            android:scaleType="centerInside"
+            android:src="@mipmap/hamburguesa" />
+
+        <ImageButton
+            android:id="@+id/btnagenda"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botondeagenda"
+            android:scaleType="centerInside"
+            app:srcCompat="@mipmap/agen" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

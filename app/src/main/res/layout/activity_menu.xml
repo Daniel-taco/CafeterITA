@@ -26,6 +26,7 @@
         android:layout_marginTop="144dp"
         android:text="@string/textViewMenu"
         android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/textViewBienvenida"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,78 +55,80 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <LinearLayout
-        android:id="@+id/navigationBar"
+    android:id="@+id/navigationBar"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="#99FFFF"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <ImageButton
+        android:id="@+id/btnhome"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#99FFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="#00FFFFFF"
+        android:contentDescription="botonhome"
+        android:padding="4dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/home2" />
 
-        <ImageButton
-            android:id="@+id/btnhome"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            android:contentDescription="botonhome"
-            android:padding="4dp"
-            android:scaleType="centerInside"
-            android:src="@mipmap/home2" />
+    <ImageButton
+        android:id="@+id/btncomida"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="#00FFFFFF"
+        android:contentDescription="botoncomida"
+        android:padding="4dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/comida3" />
 
-        <ImageButton
-            android:id="@+id/btncomida"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            android:contentDescription="botoncomida"
-            android:padding="4dp"
-            android:scaleType="centerInside"
-            android:src="@mipmap/comida3" />
+    <ImageButton
+        android:id="@+id/btnfila"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="#00FFFFFF"
+        android:contentDescription="botonfila"
+        android:scaleType="centerInside"
+        android:src="@mipmap/fila3" />
 
-        <ImageButton
-            android:id="@+id/btnfila"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            android:contentDescription="botonfila"
-            android:scaleType="centerInside"
-            android:src="@mipmap/fila3" />
+    <ImageButton
+        android:id="@+id/btnopciones"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="#00FFFFFF"
+        android:contentDescription="botonopciones"
+        android:scaleType="centerInside"
+        android:src="@mipmap/hamburguesa" />
 
-        <ImageButton
-            android:id="@+id/btnopciones"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            android:contentDescription="botonopciones"
-            android:scaleType="centerInside"
-            android:src="@mipmap/hamburguesa" />
+    <ImageButton
+        android:id="@+id/btnagenda"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="#00FFFFFF"
+        android:contentDescription="botondeagenda"
+        android:scaleType="centerInside"
+        app:srcCompat="@mipmap/agen" />
+</LinearLayout>
 
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/txt_total"
+    <Button
+        android:id="@+id/button11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="230dp"
-        android:text="Total"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="32dp"
+        android:onClick="Productos"
+        android:text="Manejar Productos"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:backgroundTint="#99FFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
-    <ListView
-        android:id="@+id/txtproductosagregados"
-        android:layout_width="327dp"
-        android:layout_height="157dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_total"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

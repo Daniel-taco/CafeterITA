@@ -26,6 +26,7 @@ public class Menu extends AppCompatActivity {
         ImageButton botonIrAComida = findViewById(R.id.btncomida);
         ImageButton botonIrAFila = findViewById(R.id.btnfila);
         ImageButton botonIrAOpciones = findViewById(R.id.btnopciones);
+        ImageButton botonIrAAgenda = findViewById(R.id.btnagenda);
 
         // Agrega un listener al botón para manejar el clic
         botonIrAHome.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +67,14 @@ public class Menu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        botonIrAAgenda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Crear un Intent para cambiar a la actividad "Ayuda"
+                Intent intent = new Intent(Menu.this, SharedAgenda.class);
+                startActivity(intent);
+            }
+        });
 
 
         spinner1= (Spinner) findViewById(R.id.spinner);
@@ -89,5 +98,10 @@ public class Menu extends AppCompatActivity {
             Intent intent = new Intent(Menu.this, Snacks.class);
             startActivity(intent);
         }
+    }
+
+    public void Productos(View v) {
+        Intent intent = new Intent(Menu.this, basededatos.class);
+        startActivity(intent);
     }
 }

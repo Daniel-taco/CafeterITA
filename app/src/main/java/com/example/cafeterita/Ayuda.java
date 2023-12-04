@@ -19,6 +19,7 @@ public class Ayuda extends AppCompatActivity {
         ImageButton botonIrAComida = findViewById(R.id.btncomida);
         ImageButton botonIrAFila = findViewById(R.id.btnfila);
         ImageButton botonIrAOpciones = findViewById(R.id.btnopciones);
+        ImageButton botonIrAAgenda = findViewById(R.id.btnagenda);
 
 
         WebView myWebView = findViewById(R.id.webview);
@@ -63,6 +64,14 @@ public class Ayuda extends AppCompatActivity {
             public void onClick(View v) {
                 // Crear un Intent para cambiar a la actividad "Ayuda"
                 Intent intent = new Intent(Ayuda.this, Ayuda.class);
+                startActivity(intent);
+            }
+        });
+        botonIrAAgenda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Crear un Intent para cambiar a la actividad "Ayuda"
+                Intent intent = new Intent(Ayuda.this, SharedAgenda.class);
                 startActivity(intent);
             }
         });
