@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -80,9 +81,20 @@ public class Snacks extends AppCompatActivity {
 
     public void init() {
         elements = new ArrayList<>();
-        elements.add(new ListElement("Galletas Chokis", "$20", R.mipmap.galletachokis));
-        elements.add(new ListElement("Galletas Principe", "$15", R.mipmap.galletaprincipe));
-        elements.add(new ListElement("Mazapan", "$10", R.mipmap.mazapan));
+        Cursor cursor = getItemsFromDatabase("snacks");
+
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                int code = cursor.getInt(cursor.getColumnIndex("code"));
+                String name = cursor.getString(cursor.getColumnIndex("name"));
+                int price = cursor.getInt(cursor.getColumnIndex("price"));
+
+                // Agrega los elementos a la lista
+                elements.add(new ListElement(name, "$" + price, String.valueOf(code)));
+            } while (cursor.moveToNext());
+
+            cursor.close();
+        }
 
         ListAdapter listAdapter = new ListAdapter(elements, this);
         RecyclerView recyclerView = findViewById(R.id.listRecyclerView);
@@ -90,5 +102,8 @@ public class Snacks extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(listAdapter);
     }
-    
+    private Cursor getItemsFromDatabase(String tableName) {
+        AdminSQLiteOpenHelper dbHelper = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
+        return dbHelper.getAllItems(tableName);
+    }
 }

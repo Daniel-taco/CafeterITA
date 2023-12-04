@@ -38,12 +38,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
     public void setItems(List<ListElement> items) {mData= items;}
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView iconImage;
-        TextView name, price;
+        TextView name, price, codeProd;
 
         ViewHolder(View itemView){
             super(itemView);
-            iconImage = itemView.findViewById(R.id.iconImageView);
+            codeProd = itemView.findViewById(R.id.codeProd);
             name = itemView.findViewById(R.id.nameTextView);
             price = itemView.findViewById(R.id.priceTextView);
         }
@@ -51,7 +50,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
         void bindData(final ListElement item) {
             name.setText(item.getName());
             price.setText(item.getPrice());
-            iconImage.setImageResource(item.getImageResId());
+            codeProd.setText(item.getCodeProd());
         }
     }
 }

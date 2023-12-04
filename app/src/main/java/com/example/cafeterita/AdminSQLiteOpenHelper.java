@@ -1,5 +1,6 @@
 package com.example.cafeterita;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -21,5 +22,10 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper{
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
+
+    public Cursor getAllItems(String tableName) {
+        SQLiteDatabase BaseDeDatos = this.getReadableDatabase();
+        return BaseDeDatos.rawQuery("SELECT * FROM " + tableName, null);
     }
 }

@@ -3,12 +3,12 @@ package com.example.cafeterita;
 public class ListElement {
     public String name;
     public String price;
-    public int imageResId; // Agregar campo para la imagen
+    public String codeProd;
 
-    public ListElement(String name, String price, int imageResId) {
+    public ListElement(String name, String price, String codeProd) {
         this.name = name;
         this.price = price;
-        this.imageResId = imageResId;
+        this.codeProd = codeProd;
     }
 
     public String getName() {
@@ -26,11 +26,11 @@ public class ListElement {
     public void setPrice(String price) {
         this.price = price;
     }
-    public int getImageResId() {
-        return imageResId;
+    public String getCodeProd() {
+        return codeProd;
     }
 
-    public void setImageResId(int imageResId) {
-        this.imageResId = imageResId;
+    public void setCodeProd(String codeProd) {
+        this.codeProd = codeProd;
     }
 }

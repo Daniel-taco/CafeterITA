@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -73,14 +74,29 @@ public class Comida extends AppCompatActivity {
 
     public void init() {
         elements = new ArrayList<>();
-        elements.add(new ListElement("Pizza", "$25", R.mipmap.pizza));
-        elements.add(new ListElement("Baguette Argentino", "$35", R.mipmap.baguette));
-        elements.add(new ListElement("Taco", "$10", R.mipmap.taco));
+        Cursor cursor = getItemsFromDatabase("comidas");
+
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                int code = cursor.getInt(cursor.getColumnIndex("code"));
+                String name = cursor.getString(cursor.getColumnIndex("name"));
+                int price = cursor.getInt(cursor.getColumnIndex("price"));
+
+                // Agrega los elementos a la lista
+                elements.add(new ListElement(name, "$" + price, String.valueOf(code)));
+            } while (cursor.moveToNext());
+
+            cursor.close();
+        }
 
         ListAdapter listAdapter = new ListAdapter(elements, this);
         RecyclerView recyclerView = findViewById(R.id.comidaRecyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(listAdapter);
+    }
+    private Cursor getItemsFromDatabase(String tableName) {
+        AdminSQLiteOpenHelper dbHelper = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
+        return dbHelper.getAllItems(tableName);
     }
 }
