@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -21,6 +22,7 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
 
         ImageButton botonIrAHome = findViewById(R.id.btnhome);
         ImageButton botonIrAComida = findViewById(R.id.btncomida);
@@ -100,8 +102,21 @@ public class Menu extends AppCompatActivity {
         }
     }
 
-    public void Productos(View v) {
-        Intent intent = new Intent(Menu.this, basededatos.class);
-        startActivity(intent);
+    public boolean onCreateOptionsMenu(android.view.Menu menu){
+        getMenuInflater().inflate(R.menu.overflow, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        if(id == R.id.item1){
+            Intent intent = new Intent(Menu.this, ListasCompras.class);
+            startActivity(intent);
+        } else if (id == R.id.item2){
+            Intent intent = new Intent(Menu.this, basededatos.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

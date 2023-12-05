@@ -45,7 +45,6 @@
         android:layout_height="50dp"
         android:layout_marginStart="92dp"
         android:layout_marginTop="28dp"
-
         android:onClick="Reenviar"
         android:text="@string/botonMenu"
         android:textColor="@color/black"
@@ -116,19 +115,5 @@
         android:scaleType="centerInside"
         app:srcCompat="@mipmap/agen" />
 </LinearLayout>
-
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="32dp"
-        android:onClick="Productos"
-        android:text="Manejar Productos"
-        android:textColor="@color/black"
-        android:textStyle="normal"
-        app:backgroundTint="#99FFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

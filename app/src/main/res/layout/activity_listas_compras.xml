@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListasCompras">
+
+    <EditText
+        android:id="@+id/txt_contenido"
+        android:layout_width="316dp"
+        android:layout_height="384dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="48dp"
+        android:background="#848BBC"
+        android:backgroundTint="#99FFFF"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombreLista" />
+
+    <EditText
+        android:id="@+id/txt_nombreLista"
+        android:layout_width="233dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/txt_nombre"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
+        android:onClick="Guardar"
+        android:text="@string/boton_guardar"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:backgroundTint="#99FFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_contenido" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="44dp"
+        android:onClick="Consultar"
+        android:text="@string/boton_consultar"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:backgroundTint="#99FFFF"
+        app:layout_constraintStart_toEndOf="@+id/button13"
+        app:layout_constraintTop_toBottomOf="@+id/txt_contenido" />
+
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#99FFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnhome"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botonhome"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/home2" />
+
+        <ImageButton
+            android:id="@+id/btncomida"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botoncomida"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/comida3" />
+
+        <ImageButton
+            android:id="@+id/btnfila"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botonfila"
+            android:scaleType="centerInside"
+            android:src="@mipmap/fila3" />
+
+        <ImageButton
+            android:id="@+id/btnopciones"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botonopciones"
+            android:scaleType="centerInside"
+            android:src="@mipmap/hamburguesa" />
+
+        <ImageButton
+            android:id="@+id/btnagenda"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="botondeagenda"
+            android:scaleType="centerInside"
+            app:srcCompat="@mipmap/agen" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
